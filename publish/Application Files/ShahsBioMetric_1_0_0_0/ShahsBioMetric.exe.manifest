@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ShahsBioMetric.exe" version="1.0.0.0" publicKeyToken="58a901d71b39e655" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="main1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ShahsBioMetric" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ShahsBioMetric.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.Protobuf.dll" size="294400">
+      <assemblyIdentity name="Google.Protobuf" version="3.5.1.0" publicKeyToken="A7D26565BAC4D604" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kmmLSyM9YCkmP+X33YMDTg/6sJlFHUuInLwRv1o/LXM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="708608">
+      <assemblyIdentity name="MySql.Data" version="8.0.15.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>csTtN1Dz7O3Ap24hir7uPIxKZlXZR6aCAPiKHL53CWo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ShahsBioMetric.exe" size="225224">
+      <assemblyIdentity name="ShahsBioMetric" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>opANHD/ur5NsKbiXurc2e1g85nMY2YlkR3ZfWJA0uaM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="dlls\zkemkeeper.dll" size="670720">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RNda5rEzGzjvYL1ZK4CnTHxVtFNOUhpVReQv+q1MlLk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="main1.ico" size="59586">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xc/44BIUVqeEY9HMSWGQYuLomls9ZobChclO6F5282Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ShahsBioMetric.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ibSJhBWt6kT1jcg30WbAXCZJOzy699/zUdgGnXs5g9w=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=nims-PC\nims" issuerKeyHash="9ff5070114fbd03402e1206ea7323d6521023786" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7GXgwH1hEaftfaerUOav9Z7wrdOJDGiSwuTPiM7jdR8=</DigestValue></Reference></SignedInfo><SignatureValue>fpnDvFy3hoJCH6T872oohMU9hR5pao7IN9tMGJvUHWj/0ZwaANaPE24cM2O2EZqejtlfjrV2gmHcHe+a0CeDMq9O94T7QsD2lHVwYpaFDwupfkJp10djIAzG8YckhiafMCrDDHeryCniZ3cepkfpu80ZyykxoJQc3bZ4xyCh70M=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ppR+6eVGvPrOqJPBw8hRXEqvbc9GXNYJgbmfxZuBWVgA2M/QXSDBqaFcbI1kykCK6l3QYk5BbjcXIwjK2Zx6/OPsSU3l/Nrd7P5pDJ82JJdBmftv5T/0li5WwqfquS5tZje1yzafhT3dEpxXjXZ9odTX/9O+HHt2puSBOaUWjp0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="1f75e3ce88cfe4c292680c89d3adf09ef5afe650aba77deda711617dc0e065ec" Description="" Url=""><as:assemblyIdentity name="ShahsBioMetric.exe" version="1.0.0.0" publicKeyToken="58a901d71b39e655" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=nims-PC\nims</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>j/VI/V8LF7as8KqXlN+Et6D8GZNXcQZD9+3lYz0lpnY=</DigestValue></Reference></SignedInfo><SignatureValue>S3Qhd+2ZdVF2twcykLe+bKP+nCh/X49yNdeKQvggUhHxi9fqNfcZU6F1xIuP+VXyz/OrdL2VzPmytH6H5HLSeXtW2lGkkhqmMZBmz3db/oxpR5OP8FzWP01AumBfQluC8D7F5R0tTa+5YyC8fuArIjYqVwBi7kCp4Px864RqwiE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ppR+6eVGvPrOqJPBw8hRXEqvbc9GXNYJgbmfxZuBWVgA2M/QXSDBqaFcbI1kykCK6l3QYk5BbjcXIwjK2Zx6/OPsSU3l/Nrd7P5pDJ82JJdBmftv5T/0li5WwqfquS5tZje1yzafhT3dEpxXjXZ9odTX/9O+HHt2puSBOaUWjp0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQbcLvLcKTW6VOVDqq6KJsWzANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAbgBpAG0AcwAtAFAAQwBcAG4AaQBtAHMwHhcNMTkwNDE1MTMwNzE4WhcNMjAwNDE0MTkwNzE4WjAjMSEwHwYDVQQDHhgAbgBpAG0AcwAtAFAAQwBcAG4AaQBtAHMwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKaUfunlRrz6zqiTwcPIUVxKr23PRlzWCYG5n8WbgVlYANjP0F0gwamhXGyNZMpAiupd0GJOQW43FyMIytmcevzj7ElN5fza3ez+aQyfNiSXQZn7b+U/9JYuVsKn6rkubWY3tcs2n4U93RKcV412faHU1//Tvhx7dqbkgTmlFo6dAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAZ9yzmjLTxrqp8pnHts21lLcl3UptP6HUstXs7WD6N6gg9E6IiFeUgraswt8HdvEdKytxP47NYL0yTE9PlZY8Oji/g95DXTjSKAJ3Qf+rnmqSI2pFlmtJKxMtFZ6Ss2/ODQnLBDd5mD93Y91VbG1ZBIR38TwSIcYSg9WuozPC30o=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

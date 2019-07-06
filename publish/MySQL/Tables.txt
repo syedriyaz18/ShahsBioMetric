@@ -1,0 +1,145 @@
+CREATE DATABASE `attendance` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+CREATE TABLE `advances_nimra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `advances_date` varchar(45) DEFAULT NULL,
+  `advances_amount` varchar(45) DEFAULT NULL,
+  `advances_reason` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `emp_id` (`emp_id`),
+  CONSTRAINT `emp_id` FOREIGN KEY (`emp_id`) REFERENCES `employees_nimra` (`employee_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `cls_nimra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `cl_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=140 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `empdetails_nimra` (
+  `emp_id` int(11) NOT NULL,
+  `emp_dob` varchar(11) DEFAULT NULL,
+  `emp_age` int(11) DEFAULT NULL,
+  `emp_qualification` varchar(45) DEFAULT NULL,
+  `emp_desig` varchar(45) DEFAULT NULL,
+  `emp_bank` varchar(45) DEFAULT NULL,
+  `emp_acno` int(11) DEFAULT NULL,
+  `emp_adhaar` varchar(45) DEFAULT NULL,
+  `emp_ssc` varchar(45) DEFAULT NULL,
+  `emp_inter` varchar(45) DEFAULT NULL,
+  `emp_ug` varchar(45) DEFAULT NULL,
+  `emp_pg` varchar(45) DEFAULT NULL,
+  `emp_phd` varchar(45) DEFAULT NULL,
+  `emp_image` varchar(45) DEFAULT NULL,
+  `emp_email` varchar(45) DEFAULT NULL,
+  `emp_mobile` int(11) DEFAULT NULL,
+  `emp_jobtype` int(11) DEFAULT NULL,
+  `emp_ptdays` int(11) DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `employees_nimra` (
+  `employee_id` int(11) NOT NULL,
+  `employee_code` varchar(45) DEFAULT NULL,
+  `employee_name` varchar(45) DEFAULT NULL,
+  `employee_gender` varchar(10) DEFAULT NULL,
+  `employee_dept` varchar(45) DEFAULT NULL,
+  `employee_college` varchar(45) DEFAULT NULL,
+  `employee_doj` varchar(45) DEFAULT NULL,
+  `employee_shift` int(11) DEFAULT NULL,
+  `employee_basic` int(11) DEFAULT NULL,
+  `employee_hra` double DEFAULT NULL,
+  `employee_da` double DEFAULT NULL,
+  `employee_TE` double DEFAULT NULL,
+  `employee_deductions` double DEFAULT NULL,
+  `employee_gross` double DEFAULT NULL,
+  `employee_pt` double DEFAULT NULL,
+  `employee_it` double DEFAULT NULL,
+  `employees_saltype` int(11) DEFAULT NULL,
+  `employees_pfstate` int(11) DEFAULT NULL,
+  `employees_esistate` int(11) DEFAULT NULL,
+  `employees_exclude` int(11) DEFAULT NULL,
+  PRIMARY KEY (`employee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `halfdays_nimra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `halfdays_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `emp_id_idx` (`emp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `hrs_nimra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `hr_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `images_nimra` (
+  `employee_id` int(11) DEFAULT NULL,
+  `image_type` varchar(200) DEFAULT NULL,
+  `employee_image` longblob,
+  `adhaar_image` longblob,
+  `ssc_image` longblob,
+  `inter_image` longblob,
+  `ug_image` longblob,
+  `pg_image` longblob,
+  `phd_image` longblob,
+  KEY `employee_id` (`employee_id`),
+  CONSTRAINT `images_nimra_ibfk_1` FOREIGN KEY (`employee_id`) REFERENCES `employees_nimra` (`employee_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `ods_nimra` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `od_date` varchar(45) DEFAULT NULL,
+  `od_day` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `emp_id_idx` (`emp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `public_holidays` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_id` int(11) DEFAULT NULL,
+  `ph_date` varchar(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `tdata` (
+  `event_name` varchar(10) DEFAULT NULL,
+  `s1` int(11) DEFAULT NULL,
+  `s2` int(11) DEFAULT NULL,
+  `s3` int(11) DEFAULT NULL,
+  `s4` int(11) DEFAULT NULL,
+  `s5` int(11) DEFAULT NULL,
+  `tdate` varchar(15) DEFAULT NULL,
+  `ttime` varchar(10) DEFAULT NULL,
+  `s6` int(11) DEFAULT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `s7` int(11) DEFAULT NULL,
+  `s8` int(11) DEFAULT NULL,
+  KEY `employee_id` (`employee_id`),
+  CONSTRAINT `employee_id` FOREIGN KEY (`employee_id`) REFERENCES `employees_nimra` (`employee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `thumpdata_nimra` (
+  `machine_no` int(11) DEFAULT NULL,
+  `emp_id` varchar(45) DEFAULT NULL,
+  `datetime_record` varchar(45) DEFAULT NULL,
+  `date_record` date DEFAULT NULL,
+  `time_record` time DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
